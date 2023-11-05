@@ -4,7 +4,9 @@ from django.shortcuts import render
 
 
 def homepage(request):
-    return render(request, 'basic_app/homepage.html')
+    context_dict = {'text':'Kush Kulshrestha',
+                    'number':100}
+    return render(request, 'basic_app/homepage.html', context_dict)
 
 
 def other_view(request):

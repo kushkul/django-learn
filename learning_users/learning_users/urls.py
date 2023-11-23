@@ -21,5 +21,8 @@ from basic_app import views
 urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('admin/', admin.site.urls),
-    path('basic_app/', include('basic_app.urls'))
+    path('basic_app/', include('basic_app.urls')),
+    path('logout/', views.user_logout, name='logout'),
+    path('login_status', views.login_status, name='login_status'),
+    
 ]
